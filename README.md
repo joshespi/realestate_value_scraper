@@ -3,7 +3,7 @@
 
 requires docker engine is installed
 
-requires a .env file that has the following variables for your property
+requires a .env file that has the following variables with URLs to the property you're wanting to track on Zillow and Redfin.
 
 ```
 ZILLOW_URL=
