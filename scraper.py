@@ -36,8 +36,9 @@ zillow_headers = {
 }
 zillow_response = requests.get(zillow_url, headers=zillow_headers)
 zillow_soup = BeautifulSoup(zillow_response.content, 'html.parser')
-zestimate_element = zillow_soup.find('span', class_='Text-c11n-8-84-0__sc-aiai24-0 eIEmla')
-zestimate_value = zestimate_element.find('span').text.strip()
+zestimate_element = zillow_soup.find('span', class_='Text-c11n-8-89-0__sc-aiai24-0 cfmKEe')
+zestimate_value = zestimate_element.find('span').text.strip() if zestimate_element else 'N/A'
+
 
 # Create a timestamp for the last updated time
 timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
