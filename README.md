@@ -21,7 +21,7 @@ PROP_ADD=
 
 ## Run
 
-```docker run -d property-scraper```
+```docker run -d --restart always property-scraper```
 
 this run command binds the data folder to the current running folder so that the output gets synced to the host machine.
 
