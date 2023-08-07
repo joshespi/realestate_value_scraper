@@ -8,6 +8,12 @@ requires a .env file that has the following variables with URLs to the property 
 ```
 ZILLOW_URL=
 REDFIN_URL=
+DB_HOST=
+DB_USER=
+DB_PORT=
+DB_NAME=
+DB_PASSWORD=
+PROP_ADD=
 ```
 
 ## Build
@@ -15,7 +21,7 @@ REDFIN_URL=
 
 ## Run
 
-```docker run --rm -d -v "$(pwd):/app/data" property-scraper```
+```docker run -d property-scraper```
 
 this run command binds the data folder to the current running folder so that the output gets synced to the host machine.
 
